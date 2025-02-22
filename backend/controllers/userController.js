@@ -1,15 +1,6 @@
 const User = require('../models/User');
 const Company = require('../models/Company');
-// exports.createUser = async (req, res) => {
-//   try {
-//     const { name, email, companyId } = req.body;
-//     const user = new User({ name, email, companyId });
-//     await user.save();
-//     res.status(201).json({ userId: user._id, companyId: user.companyId, role: user.role });
-//   } catch (err) {
-//     res.status(500).json({ error: err.message });
-//   }
-// };
+
 exports.createUser = async (req, res) => {
     try {
       const { name, email, companyId ,role } = req.body;

@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "6c50fa57-69ba-4fe2-8625-d4116f06bea9",
+		"name": "drivado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31671801"
+	},
+	"item": [
+		{
+			"name": "Company post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Accenture\",\r\n  \"parentCompanyId\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"companies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Company post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Accenture\",\r\n  \"parentCompanyId\": null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"67-fH7UkrWKfGVdI6YLQExuao9TUS8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Feb 2025 10:10:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Accenture\",\n    \"parentCompanyId\": null,\n    \"hierarchyLevel\": 0,\n    \"_id\": \"67b9a2abe32b2cd6a0c04afa\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "get company",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/companies/67b9a2abe32b2cd6a0c04afa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"companies",
+						"67b9a2abe32b2cd6a0c04afa"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get company",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/companies/67b9a2abe32b2cd6a0c04afa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"companies",
+								"67b9a2abe32b2cd6a0c04afa"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "260"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"104-RdEBPif3nn8tOKNosG+DO++HQAg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Feb 2025 10:12:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67b9a2abe32b2cd6a0c04afa\",\n    \"name\": \"Accenture\",\n    \"parentCompanyId\": null,\n    \"hierarchyLevel\": 0,\n    \"__v\": 0,\n    \"users\": [\n        {\n            \"_id\": \"67b9a2e0e32b2cd6a0c04aff\",\n            \"name\": \"John De user\",\n            \"email\": \"john@gmail.com\",\n            \"companyId\": \"67b9a2abe32b2cd6a0c04afa\",\n            \"role\": \"employee\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "CReate user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John De user\",\r\n  \"email\": \"john@gmail.com\",\r\n  \"companyId\": \"67b9a2abe32b2cd6a0c04afa\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CReate user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John De user\",\r\n  \"email\": \"john@gmail.com\",\r\n  \"companyId\": \"67b9a2abe32b2cd6a0c04afa\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "141"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8d-rqEWdarNo+WHsr+/T2RXahtyFbA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Feb 2025 10:11:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": \"67b9a2e0e32b2cd6a0c04aff\",\n    \"name\": \"John De user\",\n    \"email\": \"john@gmail.com\",\n    \"companyId\": \"67b9a2abe32b2cd6a0c04afa\",\n    \"role\": \"employee\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get user details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/67b9a2e0e32b2cd6a0c04aff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"67b9a2e0e32b2cd6a0c04aff"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get user details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/users/67b9a2e0e32b2cd6a0c04aff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"67b9a2e0e32b2cd6a0c04aff"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"df-mYriglZfkUGzF5Mu26myhkshyKU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Feb 2025 10:11:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67b9a2e0e32b2cd6a0c04aff\",\n    \"name\": \"John De user\",\n    \"email\": \"john@gmail.com\",\n    \"companyId\": {\n        \"_id\": \"67b9a2abe32b2cd6a0c04afa\",\n        \"name\": \"Accenture\",\n        \"parentCompanyId\": null,\n        \"hierarchyLevel\": 0,\n        \"__v\": 0\n    },\n    \"role\": \"employee\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "search user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/search?query=john",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "john"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "search user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/search?query=john",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "john"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"94-Q/Hbt4fyG0EvqKwWYtrBF93290A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Feb 2025 10:12:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"67b9a2e0e32b2cd6a0c04aff\",\n        \"name\": \"John De user\",\n        \"email\": \"john@gmail.com\",\n        \"companyId\": \"67b9a2abe32b2cd6a0c04afa\",\n        \"role\": \"employee\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		}
+	]
+}
