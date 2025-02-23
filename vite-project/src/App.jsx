@@ -596,7 +596,7 @@ const App = () => {
           <Divider sx={{ my: 4, backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
   
           <Typography variant="body2" align="center" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>
-            © {new Date().getFullYear()} Drivado. All rights reserved. Created by Sriparna Kaor
+            © {new Date().getFullYear()} Drivado. All rights reserved. Created by Sriparna Koar
           </Typography>
         </Container>
       </Box>
